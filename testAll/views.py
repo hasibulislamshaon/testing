@@ -15,6 +15,7 @@ def Welcome(request):
     context={"form":form}
     return render(request,'index.html',context)
 
+
 """
 def registerPerson(request):
     #form=register()
