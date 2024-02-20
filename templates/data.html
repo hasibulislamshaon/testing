@@ -1,15 +1,21 @@
-<!--{% extends 'index.html' %}
-{% load static %}
-{% block content %}
 
-<div class="container">
-    <form method="POST">
-      <fieldset>
-        <legend>Form</legend>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </fieldset>
-    </form>
-</div>
-{% endblock %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  {% if  data %}
+   {% for d in data %} 
+   <h1>Name: {{d.fullName}} </h1>
+   <h1>Phone: {{d.phone}} </h1>
+    {% endfor %}
+   {{data}}
+  {% else %}
+   <h1>Boom</h1>
+  {% endif %}
+</body>
+</html>

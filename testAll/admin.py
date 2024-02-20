@@ -1,4 +1,9 @@
 from django.contrib import admin
-from . import models
+from csvexport.actions import  csvexport
 # Register your models here.
-admin.site.register(models.formsData)
+from . models import formsData
+class adminData(admin.ModelAdmin):
+    list_display=('id','fullName','phone')
+    actions = [csvexport]
+admin.site.register(formsData,adminData)
+

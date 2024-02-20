@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'csvexport',
     'testAll',
     'jet',
     'ckeditor',
@@ -167,3 +168,13 @@ JET_THEMES = [
         'title': 'Light Gray'
     }
 ]
+
+#csv setting
+CSV_EXPORT_REFERENCE_DEPTH = 3
+CSV_EXPORT_EMPTY_VALUE = ''
+CSV_EXPORT_DELIMITER = ','
+CSV_EXPORT_ESCAPECHAR = ''
+CSV_EXPORT_QUOTECHAR = '"'
+CSV_EXPORT_DOUBLEQUOTE = True
+CSV_EXPORT_LINETERMINATOR = r'\n'
+CSV_EXPORT_QUOTING = 'QUOTE_ALL'
