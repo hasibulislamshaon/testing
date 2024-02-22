@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'csvexport',
+    'import_export',
     'testAll',
     'jet',
     'ckeditor',
