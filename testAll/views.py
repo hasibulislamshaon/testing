@@ -9,7 +9,7 @@ def Welcome(request):
     return render(request,'data.html',{'data':data})
 def sign_up(request):
     if request.method == 'GET':
-        form = form = RegisterForm()
-        return render(request, 'index.html', { 'form': form})
+        form = RegisterForm()
+        return render(request, 'register.html', { 'form': form})
     
    
