@@ -3,12 +3,11 @@ from csvexport.actions import  csvexport
 from django.http import HttpResponse 
 # Register your models here.
 from . models import formsData
-from import_export.formats.base_formats import CSV, XLSX
-IMPORT_FORMATS = [CSV, XLSX]
+from import_export.admin import ImportExportModelAdmin
 
-class adminData(admin.ModelAdmin):
-    list_display=('id','fullName','phone')
+class adminData(ImportExportModelAdmin,admin.ModelAdmin):
+    list_display=('id','fullName','phone','uuid')
   
-admin.site.register(formsData)
+admin.site.register(formsData,adminData)
 
 
